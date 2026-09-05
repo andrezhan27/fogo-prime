@@ -5,14 +5,7 @@ import { spaceImages } from '@/data/restaurant';
 import { Reveal } from '@/components/Reveal';
 import { useLanguage } from '@/providers/LanguageProvider';
 
-const gridClasses = [
-  'md:col-span-7 md:row-span-2',
-  'md:col-span-5',
-  'md:col-span-5',
-  'md:col-span-4',
-  'md:col-span-4',
-  'md:col-span-4',
-];
+const mosaicAreas = ['lead', 'top', 'tall', 'mid', 'bottomA', 'bottomB'];
 
 export function SpaceGallery() {
   const { copy } = useLanguage();
@@ -28,15 +21,15 @@ export function SpaceGallery() {
           <p className="max-w-xl text-base leading-8 text-[#5f5548] sm:text-lg">{copy.space.body}</p>
         </Reveal>
 
-        <div className="mt-14 grid gap-3 md:auto-rows-[16rem] md:grid-cols-12 sm:gap-5">
+        <div className="space-mosaic mt-14">
           {spaceImages.map((image, index) => (
-            <Reveal key={image.src} delay={Math.min(index * 0.04, 0.16)} className={gridClasses[index]}>
-              <figure className={`group relative h-full min-h-[20rem] overflow-hidden bg-[#d3c7b6] ${index === 5 ? 'md:min-h-0' : ''}`}>
+            <Reveal key={image.src} delay={Math.min(index * 0.04, 0.16)} className="min-h-0" style={{ gridArea: mosaicAreas[index] }}>
+              <figure className="group relative h-full min-h-0 overflow-hidden bg-[#d3c7b6]">
                 <Image
                   src={image.src}
                   alt={copy.space[image.key]}
                   fill
-                  sizes={index === 0 ? '(max-width: 768px) 100vw, 58vw' : '(max-width: 768px) 100vw, 34vw'}
+                  sizes={index === 0 ? '(max-width: 768px) 100vw, 50vw' : '(max-width: 768px) 50vw, 33vw'}
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                 />
               </figure>

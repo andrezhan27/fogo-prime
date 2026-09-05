@@ -3,40 +3,30 @@
 import Image from 'next/image';
 import { foodImages } from '@/data/restaurant';
 import { useLanguage } from '@/providers/LanguageProvider';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
 
 export function FoodCarousel() {
   const { copy } = useLanguage();
 
   return (
-    <Carousel opts={{ align: 'start', loop: true }} className="mt-10" aria-label={copy.menu.galleryTitle}>
-      <CarouselContent className="-ml-3 md:-ml-5">
-        {foodImages.map((image, index) => (
-          <CarouselItem key={image.src} className="basis-[86%] pl-3 sm:basis-[58%] md:basis-[44%] md:pl-5 lg:basis-[34%]">
-            <figure className="group relative aspect-[4/5] overflow-hidden bg-[#22211e]">
-              <Image
-                src={image.src}
-                alt={copy.menu[image.key]}
-                fill
-                sizes="(max-width: 640px) 86vw, (max-width: 1024px) 44vw, 34vw"
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.035]"
-              />
-              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-5 pb-5 pt-20 text-sm text-white/90">
-                <span className="mr-3 text-[#f2bd39]">0{index + 1}</span>
-                {copy.menu[image.key]}
-              </figcaption>
-            </figure>
-          </CarouselItem>
+    <section id="comida" className="overflow-hidden border-y border-white/10 bg-[#090908] py-4 text-[#f7f0e5] sm:py-6" aria-labelledby="food-reel-title">
+      <h2 id="food-reel-title" className="sr-only">{copy.menu.galleryTitle}</h2>
+      <div className="food-marquee-track flex w-max">
+        {[0, 1].map((setIndex) => (
+          <div key={setIndex} className="flex gap-3 pr-3 sm:gap-5 sm:pr-5" aria-hidden={setIndex === 1}>
+            {foodImages.map((image) => (
+              <figure key={`${setIndex}-${image.src}`} className="group relative aspect-[4/5] w-[clamp(15rem,28vw,25rem)] shrink-0 overflow-hidden bg-[#22211e]">
+                <Image
+                  src={image.src}
+                  alt={setIndex === 0 ? copy.menu[image.key] : ''}
+                  fill
+                  sizes="(max-width: 640px) 15rem, (max-width: 1200px) 28vw, 25rem"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.035]"
+                />
+              </figure>
+            ))}
+          </div>
         ))}
-      </CarouselContent>
-      <CarouselPrevious className="left-3 top-1/2 size-11 border-white/20 bg-black/70 text-white hover:bg-[#dca51d] hover:text-black disabled:hidden" aria-label={copy.menu.previous} />
-      <CarouselNext className="right-3 top-1/2 size-11 border-white/20 bg-black/70 text-white hover:bg-[#dca51d] hover:text-black disabled:hidden" aria-label={copy.menu.next} />
-    </Carousel>
+      </div>
+    </section>
   );
 }

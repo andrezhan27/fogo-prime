@@ -1,6 +1,6 @@
 'use client';
 
-import { ReactNode } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
@@ -8,10 +8,12 @@ export function Reveal({
   children,
   className,
   delay = 0,
+  style,
 }: {
   children: ReactNode;
   className?: string;
   delay?: number;
+  style?: CSSProperties;
 }) {
   const reducedMotion = useReducedMotion();
 
@@ -22,6 +24,7 @@ export function Reveal({
       viewport={{ once: true, amount: 0.18 }}
       transition={{ duration: 0.75, delay, ease: [0.22, 1, 0.36, 1] }}
       className={cn(className)}
+      style={style}
     >
       {children}
     </motion.div>

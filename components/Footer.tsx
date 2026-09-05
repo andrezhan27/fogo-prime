@@ -49,9 +49,22 @@ export function Footer() {
             </address>
           </div>
         </div>
-        <div className="flex flex-col gap-4 pt-7 text-xs text-white/35 sm:flex-row sm:items-center sm:justify-between">
+        <div className="grid gap-5 pt-7 text-xs text-white/35 lg:grid-cols-[1fr_auto_1fr] lg:items-center">
           <p>© {new Date().getFullYear()} Fogo Prime. {copy.footer.rights}</p>
-          <a href={restaurantInfo.complaintsBook} target="_blank" rel="noreferrer" className="w-fit underline underline-offset-4 hover:text-white">{copy.footer.complaints}</a>
+          <a href="https://intelis.pt" target="_blank" rel="noreferrer" className="w-fit underline underline-offset-4 hover:text-white">{copy.footer.designedBy}</a>
+          <div className="flex flex-wrap gap-x-5 gap-y-3 lg:justify-end">
+            {restaurantInfo.privacy_policy_url ? (
+              <a href={restaurantInfo.privacy_policy_url} className="underline underline-offset-4 hover:text-white">{copy.footer.privacy}</a>
+            ) : (
+              <span aria-disabled="true" className="opacity-55">{copy.footer.privacy}</span>
+            )}
+            {restaurantInfo.terms_and_conditions_url ? (
+              <a href={restaurantInfo.terms_and_conditions_url} className="underline underline-offset-4 hover:text-white">{copy.footer.terms}</a>
+            ) : (
+              <span aria-disabled="true" className="opacity-55">{copy.footer.terms}</span>
+            )}
+            <a href={restaurantInfo.complaintsBook} target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-white">{copy.footer.complaints}</a>
+          </div>
         </div>
       </div>
     </footer>

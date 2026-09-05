@@ -27,8 +27,8 @@ export function Hero() {
         sizes="100vw"
         className="object-cover object-center md:hidden"
       />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,6,5,.93)_0%,rgba(6,6,5,.7)_42%,rgba(6,6,5,.12)_77%),linear-gradient(0deg,rgba(5,5,4,.65)_0%,transparent_45%)] max-md:bg-[linear-gradient(0deg,rgba(6,6,5,.94)_0%,rgba(6,6,5,.44)_72%,rgba(6,6,5,.6)_100%)]" />
-      <div className="relative mx-auto flex min-h-[46rem] max-w-[90rem] items-end px-5 pb-24 pt-32 sm:min-h-[50rem] sm:px-8 lg:min-h-screen lg:items-center lg:px-10 lg:pb-16 lg:pt-32">
+      <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(5,5,4,.78)_0%,rgba(6,6,5,.3)_52%,rgba(6,6,5,.58)_100%)]" />
+      <div className="relative mx-auto flex min-h-[46rem] max-w-[90rem] items-center justify-center px-5 pb-20 pt-32 text-center sm:min-h-[50rem] sm:px-8 lg:min-h-screen lg:px-10 lg:pb-16 lg:pt-32">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -36,23 +36,19 @@ export function Hero() {
             hidden: {},
             visible: { transition: { delayChildren: stagger(0.12, { startDelay: 0.15 }) } },
           }}
-          className="max-w-2xl"
+          className="flex max-w-3xl flex-col items-center"
         >
-          <motion.p variants={{ hidden: { opacity: 0, y: 14 }, visible: { opacity: 1, y: 0 } }} transition={{ duration: 0.65 }} className="mb-5 text-xs font-bold uppercase tracking-[0.22em] text-[#f2bd39] sm:text-sm">
-            {copy.hero.eyebrow}
-          </motion.p>
-          <motion.h1 variants={{ hidden: { opacity: 0, y: 18 }, visible: { opacity: 1, y: 0 } }} transition={{ duration: 0.75 }} className="font-heading text-[clamp(3.35rem,7.5vw,6.8rem)] leading-[0.88] font-semibold tracking-[-0.045em] text-balance">
-            {copy.hero.title}
+          <motion.h1 variants={{ hidden: { opacity: 0, y: 18 }, visible: { opacity: 1, y: 0 } }} transition={{ duration: 0.75 }} className="font-heading text-[clamp(4.25rem,11vw,9.5rem)] leading-[0.76] font-black uppercase tracking-[-0.065em] drop-shadow-[0_8px_28px_rgba(0,0,0,.45)]">
+            {copy.hero.title.split(' ').map((word) => <span key={word} className="block">{word}</span>)}
           </motion.h1>
-          <motion.p variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }} transition={{ duration: 0.7 }} className="mt-7 max-w-xl text-base leading-7 text-[#e5dccf]/82 sm:text-lg sm:leading-8">
+          <motion.p variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }} transition={{ duration: 0.7 }} className="mt-9 max-w-xl text-base leading-7 text-[#e5dccf]/85 sm:text-lg sm:leading-8">
             {copy.hero.body}
           </motion.p>
-          <motion.div variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }} transition={{ duration: 0.7 }} className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+          <motion.div variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }} transition={{ duration: 0.7 }} className="mt-8 flex justify-center">
             <MagneticReservationButton>{copy.hero.reserve}</MagneticReservationButton>
-            <span className="text-xs font-semibold uppercase tracking-[0.14em] text-white/55">{copy.hero.note}</span>
           </motion.div>
         </motion.div>
-        <a href="#rodizio" className="absolute bottom-6 left-5 inline-flex min-h-11 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-white/55 transition-colors hover:text-white sm:left-8 lg:left-auto lg:right-10" aria-label={copy.hero.scroll}>
+        <a href="#comida" className="absolute bottom-6 left-1/2 inline-flex min-h-11 -translate-x-1/2 items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-white/55 transition-colors hover:text-white" aria-label={copy.hero.scroll}>
           {copy.hero.scroll}
           <ChevronDown aria-hidden="true" className="size-4 animate-bounce" />
         </a>

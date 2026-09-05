@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowUpRight, MapPin, Phone } from 'lucide-react';
+import { ArrowUpRight, Clock3, MapPin, Phone } from 'lucide-react';
 import { restaurantInfo } from '@/data/restaurant';
 import { Reveal } from '@/components/Reveal';
 import { MapEmbed } from '@/components/MapEmbed';
@@ -33,6 +33,13 @@ export function ContactSection() {
                 <div>
                   <dt className="text-xs font-bold uppercase tracking-[0.14em] text-[#7e7161]">{copy.contact.phoneLabel}</dt>
                   <dd><a href={restaurantInfo.phoneHref} className="mt-2 inline-block font-heading text-3xl font-semibold hover:text-[#865d00]">{restaurantInfo.phoneDisplay}</a></dd>
+                </div>
+              </div>
+              <div className="grid grid-cols-[2.6rem_1fr] gap-4 border-b border-[#b9aa94]/70 py-6">
+                <Clock3 aria-hidden="true" className="mt-1 size-5 text-[#9b6a00]" strokeWidth={1.7} />
+                <div>
+                  <dt className="text-xs font-bold uppercase tracking-[0.14em] text-[#7e7161]">{copy.contact.hoursLabel}</dt>
+                  <dd className="mt-2 max-w-sm text-base leading-7">{copy.contact.hours}</dd>
                 </div>
               </div>
             </dl>

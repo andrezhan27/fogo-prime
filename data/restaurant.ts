@@ -15,12 +15,13 @@ export const restaurantInfo = {
   tiktok: 'https://www.tiktok.com/@chongqingnoodles722',
   facebook: 'https://www.facebook.com/p/Prime-Fogo-61593334026375/',
   complaintsBook: 'https://www.livroreclamacoes.pt/Inicio/',
+  privacy_policy_url: '' as string,
+  terms_and_conditions_url: '' as string,
 } as const;
 
 export const pricing = [
-  { key: 'weekday', lunch: '17,90 €', dinner: '23,90 €' },
-  { key: 'weekend', lunch: '23,90 €', dinner: '23,90 €' },
-  { key: 'children', lunch: '9,90 €', dinner: '12,90 €' },
+  { key: 'adults', price: '24,90 €' },
+  { key: 'children', price: '10,90 €' },
 ] as const;
 
 export const foodImages = [
