@@ -16,7 +16,6 @@ import {
 
 const links = [
   ['home', '#inicio'],
-  ['experience', '#rodizio'],
   ['menu', '#menu'],
   ['space', '#espaco'],
   ['videos', '#videos'],
@@ -43,7 +42,7 @@ export function Navbar() {
           : 'border-transparent bg-gradient-to-b from-black/70 to-transparent'
       }`}
     >
-      <div className="mx-auto flex h-[4.75rem] max-w-[90rem] items-center justify-between px-4 sm:px-8 lg:h-[5.5rem] lg:px-10">
+      <div className="mx-auto flex h-[4.75rem] max-w-[76rem] items-center justify-between px-6 sm:px-10 lg:h-[5.5rem] lg:px-16 xl:px-20">
         <a href="#inicio" className="relative z-10 shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f2bd39]" aria-label="Fogo Prime — início">
           <Image
             src="/images/logo.png"

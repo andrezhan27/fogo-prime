@@ -1,6 +1,13 @@
 import type { Metadata } from 'next';
-import { Montserrat } from 'next/font/google';
+import { Jost, Montserrat } from 'next/font/google';
 import './globals.css';
+
+const jost = Jost({
+  variable: '--font-jost',
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
+});
 
 const montserrat = Montserrat({
   variable: '--font-montserrat',
@@ -31,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt">
-      <body className={montserrat.variable}>
+      <body className={`${jost.variable} ${montserrat.variable}`}>
         {children}
       </body>
     </html>

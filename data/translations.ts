@@ -4,7 +4,6 @@ export const translations = {
   pt: {
     nav: {
       home: 'Início',
-      experience: 'Rodízio',
       menu: 'Menu',
       space: 'Espaço',
       videos: 'Vídeos',
@@ -14,7 +13,6 @@ export const translations = {
       closeMenu: 'Fechar menu',
     },
     hero: {
-      eyebrow: '',
       title: 'FOGO PRIME',
       body: 'Cortes selecionados, serviço à mesa e a hospitalidade brasileira no coração de Lisboa.',
       reserve: 'Reservar mesa',
@@ -22,22 +20,11 @@ export const translations = {
       scroll: 'Descobrir',
       imageAlt: 'Sala do Fogo Prime em Lisboa',
     },
-    experience: {
-      eyebrow: 'A EXPERIÊNCIA',
-      title: 'Mais do que um jantar. Uma experiência.',
-      body: 'O rodízio brasileiro é um ritual de partilha. À mesa, cada corte chega no ponto certo, servido ao seu ritmo e acompanhado por sabores pensados para prolongar o momento.',
-      highlights: [
-        'Cortes selecionados',
-        'Serviço diretamente à mesa',
-        'Rodízio à descrição',
-        'Acompanhamentos incluídos',
-      ],
-      reserve: 'Reservar mesa',
-    },
     menu: {
-      eyebrow: 'RODÍZIO À DESCRIÇÃO',
-      title: 'O sabor do fogo, sem limites.',
+      title: 'Menu',
       intro: 'Picanha, carnes variadas, camarão, polvo, saladas e fruta — tudo incluído no rodízio.',
+      priceTitle: 'Preços do rodízio',
+      pdfAction: 'Ver menu completo (PDF)',
       lunch: '',
       dinner: '',
       perPerson: 'por pessoa',
@@ -59,8 +46,7 @@ export const translations = {
       groupTwo: 'Cortes premium preparados no fogo',
     },
     space: {
-      eyebrow: 'O NOSSO ESPAÇO',
-      title: 'Um espaço feito para ficar.',
+      title: 'Espaço',
       body: 'Luz quente, madeira e detalhes tropicais criam o cenário para jantares, encontros de grupo e celebrações sem pressa.',
       space0: 'Interior acolhedor do Fogo Prime',
       space1: 'Mesas preparadas para receber',
@@ -70,8 +56,7 @@ export const translations = {
       space5: 'Atmosfera noturna do Fogo Prime',
     },
     social: {
-      eyebrow: 'EM MOVIMENTO',
-      title: 'A experiência continua fora da mesa.',
+      title: 'Vídeos',
       body: 'Veja os cortes, o serviço e os momentos partilhados no Fogo Prime.',
       watch: 'Ver em',
       instagramVideo: 'O rodízio visto de perto',
@@ -83,8 +68,7 @@ export const translations = {
       videoCaption: 'Rodízio de picanha à vontade no Fogo Prime',
     },
     contact: {
-      eyebrow: 'VISITE-NOS',
-      title: 'Fogo Prime, Lisboa.',
+      title: 'Contactos',
       addressLabel: 'Morada',
       phoneLabel: 'Telefone',
       hoursLabel: 'Horário',
@@ -94,8 +78,7 @@ export const translations = {
       mapTitle: 'Localização do Fogo Prime no Google Maps',
     },
     reserve: {
-      eyebrow: 'A SUA MESA ESPERA POR SI',
-      title: 'Pronto para viver a experiência Fogo Prime?',
+      title: 'Reservar',
       body: 'Reserve a sua mesa e descubra o verdadeiro rodízio brasileiro em Lisboa.',
       action: 'Reservar mesa',
       dialogTitle: 'Reservar no Fogo Prime',
@@ -118,7 +101,6 @@ export const translations = {
   en: {
     nav: {
       home: 'Home',
-      experience: 'Rodízio',
       menu: 'Menu',
       space: 'Space',
       videos: 'Videos',
@@ -128,7 +110,6 @@ export const translations = {
       closeMenu: 'Close menu',
     },
     hero: {
-      eyebrow: '',
       title: 'FOGO PRIME',
       body: 'Selected cuts, tableside service and Brazilian hospitality in the heart of Lisbon.',
       reserve: 'Book a table',
@@ -136,22 +117,11 @@ export const translations = {
       scroll: 'Discover',
       imageAlt: 'Fogo Prime dining room in Lisbon',
     },
-    experience: {
-      eyebrow: 'THE EXPERIENCE',
-      title: 'More than dinner. An experience.',
-      body: 'Brazilian rodízio is a ritual made for sharing. Every cut reaches your table at its best, served at your pace with sides designed to make the moment last.',
-      highlights: [
-        'Selected cuts',
-        'Served directly at your table',
-        'Unlimited rodízio',
-        'Sides included',
-      ],
-      reserve: 'Book a table',
-    },
     menu: {
-      eyebrow: 'UNLIMITED RODÍZIO',
-      title: 'The taste of fire, without limits.',
+      title: 'Menu',
       intro: 'Picanha, assorted meats, shrimp, octopus, salads and fruit — all included in the rodízio.',
+      priceTitle: 'Rodízio prices',
+      pdfAction: 'View full menu (PDF)',
       lunch: '',
       dinner: '',
       perPerson: 'per person',
@@ -173,8 +143,7 @@ export const translations = {
       groupTwo: 'Premium cuts prepared over fire',
     },
     space: {
-      eyebrow: 'OUR SPACE',
-      title: 'A space made for staying.',
+      title: 'Space',
       body: 'Warm light, wood and tropical details set the scene for dinners, group gatherings and unhurried celebrations.',
       space0: 'Welcoming Fogo Prime interior',
       space1: 'Tables ready to welcome guests',
@@ -184,8 +153,7 @@ export const translations = {
       space5: 'Fogo Prime evening atmosphere',
     },
     social: {
-      eyebrow: 'IN MOTION',
-      title: 'The experience continues beyond the table.',
+      title: 'Videos',
       body: 'See the cuts, the service and the moments shared at Fogo Prime.',
       watch: 'Watch on',
       instagramVideo: 'Rodízio seen up close',
@@ -197,8 +165,7 @@ export const translations = {
       videoCaption: 'Unlimited picanha rodízio at Fogo Prime',
     },
     contact: {
-      eyebrow: 'VISIT US',
-      title: 'Fogo Prime, Lisbon.',
+      title: 'Contact',
       addressLabel: 'Address',
       phoneLabel: 'Phone',
       hoursLabel: 'Opening hours',
@@ -208,8 +175,7 @@ export const translations = {
       mapTitle: 'Fogo Prime location on Google Maps',
     },
     reserve: {
-      eyebrow: 'YOUR TABLE IS WAITING',
-      title: 'Ready to experience Fogo Prime?',
+      title: 'Book a table',
       body: 'Book your table and discover true Brazilian rodízio in Lisbon.',
       action: 'Book a table',
       dialogTitle: 'Book at Fogo Prime',

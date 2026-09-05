@@ -7,7 +7,7 @@ export function MapEmbed() {
   const { copy } = useLanguage();
 
   return (
-    <div className="relative min-h-[25rem] overflow-hidden bg-[#d7cbbb] lg:min-h-[36rem]">
+    <div className="relative min-h-[20rem] overflow-hidden bg-[#d7cbbb] sm:min-h-[24rem] lg:min-h-[28rem]">
       <iframe
         src={restaurantInfo.mapsEmbedUrl}
         title={copy.contact.mapTitle}

@@ -1,7 +1,5 @@
 import { Hero } from '@/components/Hero';
-import { FoodCarousel } from '@/components/FoodCarousel';
 import { Navbar } from '@/components/Navbar';
-import { ExperienceSection } from '@/components/ExperienceSection';
 import { MenuSection } from '@/components/MenuSection';
 import { SpaceGallery } from '@/components/SpaceGallery';
 import { SocialVideos } from '@/components/SocialVideos';
@@ -44,9 +42,7 @@ export default function Home() {
         <Navbar />
         <main>
           <Hero />
-          <FoodCarousel />
           <MenuSection />
-          <ExperienceSection />
           <SpaceGallery />
           <SocialVideos />
           <ContactSection />

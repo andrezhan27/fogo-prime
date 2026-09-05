@@ -7,7 +7,6 @@ import { useLanguage } from '@/providers/LanguageProvider';
 import { useReservation } from '@/providers/ReservationProvider';
 
 const footerLinks = [
-  ['experience', '#rodizio'],
   ['menu', '#menu'],
   ['space', '#espaco'],
   ['videos', '#videos'],
@@ -19,8 +18,8 @@ export function Footer() {
   const { openReservation } = useReservation();
 
   return (
-    <footer className="border-t border-white/10 bg-[#080807] px-5 pb-8 pt-16 text-[#f7f0e5] sm:px-8 sm:pt-20 lg:px-10">
-      <div className="mx-auto max-w-[90rem]">
+    <footer className="border-t border-white/10 bg-[#080807] px-6 pb-8 pt-16 text-[#f7f0e5] sm:px-10 sm:pt-20 lg:px-16 xl:px-20">
+      <div className="mx-auto max-w-[76rem]">
         <div className="grid gap-12 border-b border-white/10 pb-14 md:grid-cols-2 lg:grid-cols-[1.4fr_.8fr_.8fr_1fr] lg:gap-14">
           <div>
             <Image src="/images/logo.png" alt="Fogo Prime" width={116} height={102} className="h-24 w-28 object-contain" />
