@@ -14,7 +14,6 @@ export const translations = {
     },
     hero: {
       title: 'FOGO PRIME',
-      body: 'Cortes selecionados, serviço à mesa e a hospitalidade brasileira no coração de Lisboa.',
       reserve: 'Reservar mesa',
       note: '',
       scroll: 'Descobrir',
@@ -56,7 +55,7 @@ export const translations = {
       space5: 'Atmosfera noturna do Fogo Prime',
     },
     social: {
-      title: 'Vídeos',
+      title: 'Redes sociais',
       body: 'Veja os cortes, o serviço e os momentos partilhados no Fogo Prime.',
       watch: 'Ver em',
       instagramVideo: 'O rodízio visto de perto',
@@ -92,10 +91,10 @@ export const translations = {
       follow: 'Siga-nos',
       contacts: 'Contactos',
       complaints: 'Livro de reclamações',
-      designedBy: 'Desenhado por Intelis',
+      designedBy: 'Desenhado pela Intelis',
       privacy: 'Política de privacidade',
       terms: 'Termos e condições',
-      rights: 'Todos os direitos reservados.',
+      rights: 'todos os direitos reservados.',
     },
   },
   en: {
@@ -111,7 +110,6 @@ export const translations = {
     },
     hero: {
       title: 'FOGO PRIME',
-      body: 'Selected cuts, tableside service and Brazilian hospitality in the heart of Lisbon.',
       reserve: 'Book a table',
       note: '',
       scroll: 'Discover',
@@ -153,7 +151,7 @@ export const translations = {
       space5: 'Fogo Prime evening atmosphere',
     },
     social: {
-      title: 'Videos',
+      title: 'Social media',
       body: 'See the cuts, the service and the moments shared at Fogo Prime.',
       watch: 'Watch on',
       instagramVideo: 'Rodízio seen up close',
@@ -192,7 +190,7 @@ export const translations = {
       designedBy: 'Designed by Intelis',
       privacy: 'Privacy policy',
       terms: 'Terms and conditions',
-      rights: 'All rights reserved.',
+      rights: 'all rights reserved.',
     },
   },
 } as const;

@@ -10,7 +10,7 @@ export function MenuSection() {
   const { copy } = useLanguage();
 
   return (
-    <section id="menu" className="overflow-hidden bg-[#090908] px-6 py-24 text-[#f7f0e5] sm:px-10 sm:py-28 lg:px-16 lg:py-32 xl:px-20">
+    <section id="menu" className="overflow-hidden bg-[#090908] px-6 pb-20 pt-16 text-[#f7f0e5] sm:px-10 sm:pb-24 sm:pt-20 lg:px-16 lg:pb-28 lg:pt-20 xl:px-20">
       <div className="mx-auto max-w-[76rem]">
         <Reveal>
           <h2 className="font-heading text-[clamp(2.7rem,5vw,4.5rem)] leading-none font-semibold tracking-[-0.035em]">{copy.menu.title}</h2>

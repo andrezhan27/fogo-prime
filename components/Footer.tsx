@@ -48,9 +48,12 @@ export function Footer() {
             </address>
           </div>
         </div>
-        <div className="grid gap-5 pt-7 text-xs text-white/35 lg:grid-cols-[1fr_auto_1fr] lg:items-center">
-          <p>© {new Date().getFullYear()} Fogo Prime. {copy.footer.rights}</p>
-          <a href="https://intelis.pt" target="_blank" rel="noreferrer" className="w-fit underline underline-offset-4 hover:text-white">{copy.footer.designedBy}</a>
+        <div className="grid gap-5 pt-7 text-xs text-white/35 lg:grid-cols-[1fr_auto] lg:items-center">
+          <p>
+            © {new Date().getFullYear()} Fogo Prime.{' '}
+            <a href="https://intelis.pt" target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-white">{copy.footer.designedBy}</a>,{' '}
+            {copy.footer.rights}
+          </p>
           <div className="flex flex-wrap gap-x-5 gap-y-3 lg:justify-end">
             {restaurantInfo.privacy_policy_url ? (
               <a href={restaurantInfo.privacy_policy_url} className="underline underline-offset-4 hover:text-white">{copy.footer.privacy}</a>

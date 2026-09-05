@@ -36,15 +36,12 @@ export function Hero() {
             hidden: {},
             visible: { transition: { delayChildren: stagger(0.12, { startDelay: 0.15 }) } },
           }}
-          className="flex max-w-3xl flex-col items-center"
+          className="flex max-w-3xl translate-y-28 flex-col items-center sm:translate-y-36 lg:translate-y-40"
         >
-          <motion.h1 variants={{ hidden: { opacity: 0, y: 18 }, visible: { opacity: 1, y: 0 } }} transition={{ duration: 0.75 }} className="font-brand text-[clamp(3.35rem,8vw,6.8rem)] leading-[0.79] font-black uppercase tracking-[-0.055em] drop-shadow-[0_8px_28px_rgba(0,0,0,.45)]">
-            {copy.hero.title.split(' ').map((word) => <span key={word} className="block">{word}</span>)}
+          <motion.h1 variants={{ hidden: { opacity: 0, y: 18 }, visible: { opacity: 1, y: 0 } }} transition={{ duration: 0.75 }} className="font-brand text-[clamp(1.65rem,3vw,2.5rem)] leading-none font-extrabold uppercase tracking-[0.12em] drop-shadow-[0_5px_18px_rgba(0,0,0,.65)]">
+            {copy.hero.title}
           </motion.h1>
-          <motion.p variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }} transition={{ duration: 0.7 }} className="mt-9 max-w-xl text-base leading-7 text-[#e5dccf]/85 sm:text-lg sm:leading-8">
-            {copy.hero.body}
-          </motion.p>
-          <motion.div variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }} transition={{ duration: 0.7 }} className="mt-8 flex justify-center">
+          <motion.div variants={{ hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0 } }} transition={{ duration: 0.7 }} className="mt-7 flex justify-center">
             <MagneticReservationButton>{copy.hero.reserve}</MagneticReservationButton>
           </motion.div>
         </motion.div>

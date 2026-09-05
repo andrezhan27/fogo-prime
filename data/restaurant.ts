@@ -8,7 +8,7 @@ export const restaurantInfo = {
   mapsEmbedUrl:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.163704016821!2d-9.148969024024598!3d38.73700547175885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd193315d025ff81%3A0x9a31f8b03995aaf0!2sFogo%20Prime!5e0!3m2!1sen!2spt!4v1788615747459!5m2!1sen!2spt',
   reservationWidgetUrl: 'https://reserve.intelis.pt/fogoprime',
-  fullMenuPdfUrl: '/menu-fogo-prime.pdf',
+  fullMenuPdfUrl: '/Menu.pdf',
   instagram: 'https://www.instagram.com/fogoprime/?hl=en',
   instagramVideo: 'https://www.instagram.com/p/Db27TGzsIMd/?hl=en',
   featuredTikTok:

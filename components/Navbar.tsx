@@ -36,10 +36,10 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-40 border-b transition-all duration-500 ${
+      className={`fixed inset-x-0 top-0 z-40 transition-all duration-500 ${
         scrolled
-          ? 'border-white/10 bg-[#0b0b0a]/92 shadow-[0_10px_40px_rgba(0,0,0,.22)] backdrop-blur-md'
-          : 'border-transparent bg-gradient-to-b from-black/70 to-transparent'
+          ? 'bg-[#0b0b0a]/92 shadow-[0_10px_40px_rgba(0,0,0,.22)] backdrop-blur-md'
+          : 'bg-gradient-to-b from-black/70 to-transparent'
       }`}
     >
       <div className="mx-auto flex h-[4.75rem] max-w-[76rem] items-center justify-between px-6 sm:px-10 lg:h-[5.5rem] lg:px-16 xl:px-20">

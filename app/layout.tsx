@@ -1,19 +1,11 @@
 import type { Metadata } from 'next';
-import { Jost, Montserrat } from 'next/font/google';
+import { Nunito_Sans } from 'next/font/google';
 import './globals.css';
 
-const jost = Jost({
-  variable: '--font-jost',
+const nunitoSans = Nunito_Sans({
+  variable: '--font-nunito-sans',
   subsets: ['latin'],
   display: 'swap',
-  weight: ['400', '500', '600', '700'],
-});
-
-const montserrat = Montserrat({
-  variable: '--font-montserrat',
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['400', '500', '600', '700', '800', '900'],
 });
 
 export const metadata: Metadata = {
@@ -38,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt">
-      <body className={`${jost.variable} ${montserrat.variable}`}>
+      <body className={nunitoSans.variable}>
         {children}
       </body>
     </html>

@@ -11,7 +11,7 @@ export function ContactSection() {
   const { copy } = useLanguage();
 
   return (
-    <section id="contactos" className="bg-[#f3ede2] px-6 py-24 text-[#171510] sm:px-10 sm:py-28 lg:px-16 lg:py-32 xl:px-20">
+    <section id="contactos" className="bg-[#f3ede2] px-6 pb-20 pt-16 text-[#171510] sm:px-10 sm:pb-24 sm:pt-20 lg:px-16 lg:pb-28 lg:pt-20 xl:px-20">
       <div className="mx-auto max-w-[72rem]">
         <Reveal className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="lg:sticky lg:top-32 lg:self-start">
