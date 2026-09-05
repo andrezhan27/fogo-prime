@@ -1,0 +1,27 @@
+'use client';
+
+import Image from 'next/image';
+import { Reveal } from '@/components/Reveal';
+import { MagneticReservationButton } from '@/components/MagneticReservationButton';
+import { useLanguage } from '@/providers/LanguageProvider';
+
+export function ReservationCTA() {
+  const { copy } = useLanguage();
+
+  return (
+    <section id="reservar" className="bg-[#0b0b0a] px-5 py-16 text-[#f7f0e5] sm:px-8 sm:py-20 lg:px-10 lg:py-24">
+      <Reveal className="mx-auto grid max-w-[90rem] border border-white/13 lg:grid-cols-[1.1fr_.9fr]">
+        <div className="group relative min-h-[23rem] overflow-hidden lg:min-h-[36rem]">
+          <Image src="/images/reserve-cta.jpg" alt={copy.reserve.imageAlt} fill sizes="(max-width: 1024px) 100vw, 55vw" className="object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/15" />
+        </div>
+        <div className="flex flex-col justify-center bg-[#15130f] px-6 py-14 sm:px-12 lg:px-16">
+          <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#f2bd39]">{copy.reserve.eyebrow}</p>
+          <h2 className="mt-5 font-heading text-[clamp(3rem,5vw,5.4rem)] leading-[0.93] font-semibold tracking-[-0.04em]">{copy.reserve.title}</h2>
+          <p className="mt-6 max-w-lg text-base leading-8 text-[#c9bdad] sm:text-lg">{copy.reserve.body}</p>
+          <MagneticReservationButton className="mt-8 self-start">{copy.reserve.action}</MagneticReservationButton>
+        </div>
+      </Reveal>
+    </section>
+  );
+}
