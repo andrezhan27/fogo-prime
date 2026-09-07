@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Menu } from 'lucide-react';
 import { useLanguage } from '@/providers/LanguageProvider';
@@ -15,11 +16,11 @@ import {
 } from '@/components/ui/sheet';
 
 const links = [
-  ['home', '#inicio'],
-  ['menu', '#menu'],
-  ['space', '#espaco'],
-  ['videos', '#videos'],
-  ['contact', '#contactos'],
+  ['home', '/#inicio'],
+  ['menu', '/#menu'],
+  ['space', '/#espaco'],
+  ['videos', '/#videos'],
+  ['contact', '/#contactos'],
 ] as const;
 
 export function Navbar() {
@@ -43,8 +44,8 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto flex h-[4.75rem] max-w-[76rem] items-center justify-between px-6 sm:px-10 lg:h-[5.5rem] lg:px-16 xl:px-20">
-        <a
-          href="#inicio"
+        <Link
+          href="/#inicio"
           className="relative z-10 shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f2bd39]"
           aria-label="Fogo Prime — início"
         >
@@ -56,20 +57,20 @@ export function Navbar() {
             loading="eager"
             className="h-14 w-16 object-contain lg:h-16 lg:w-[4.5rem]"
           />
-        </a>
+        </Link>
 
         <nav
           aria-label="Navegação principal"
           className="hidden items-center gap-7 xl:flex"
         >
           {links.map(([key, href]) => (
-            <a
+            <Link
               key={key}
               href={href}
               className="ui-label text-white/75 transition-colors hover:text-[#f2bd39] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f2bd39]"
             >
               {copy.nav[key]}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -127,7 +128,7 @@ export function Navbar() {
                 aria-label="Navegação móvel"
               >
                 {links.map(([key, href], index) => (
-                  <a
+                  <Link
                     key={key}
                     href={href}
                     onClick={() => setMobileOpen(false)}
@@ -137,7 +138,7 @@ export function Navbar() {
                       0{index + 1}
                     </span>
                     {copy.nav[key]}
-                  </a>
+                  </Link>
                 ))}
               </nav>
               <div className="mt-auto grid gap-5 p-6">

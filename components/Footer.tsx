@@ -1,10 +1,10 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { Camera, Users } from 'lucide-react';
 import { restaurantInfo } from '@/data/restaurant';
 import { useLanguage } from '@/providers/LanguageProvider';
-import { useReservation } from '@/providers/ReservationProvider';
 
 const footerLinks = [
   ['menu', '#menu'],
@@ -15,7 +15,6 @@ const footerLinks = [
 
 export function Footer() {
   const { copy } = useLanguage();
-  const { openReservation } = useReservation();
 
   return (
     <footer className="border-t border-white/10 bg-[#080807] px-6 pb-8 pt-16 text-[#f7f0e5] sm:px-10 sm:pt-20 lg:px-16 xl:px-20">
@@ -47,13 +46,12 @@ export function Footer() {
                   {copy.nav[key]}
                 </a>
               ))}
-              <button
-                type="button"
-                onClick={openReservation}
-                className="min-h-11 w-fit text-left text-sm text-white/60 transition-colors hover:text-white"
+              <Link
+                href="/reservation"
+                className="inline-flex min-h-11 w-fit items-center text-left text-sm text-white/60 transition-colors hover:text-white"
               >
                 {copy.nav.reserve}
-              </button>
+              </Link>
             </nav>
           </div>
           <div>

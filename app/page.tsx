@@ -8,7 +8,6 @@ import { ReservationCTA } from '@/components/ReservationCTA';
 import { Footer } from '@/components/Footer';
 import { restaurantInfo } from '@/data/restaurant';
 import { LanguageProvider } from '@/providers/LanguageProvider';
-import { ReservationProvider } from '@/providers/ReservationProvider';
 
 export default function Home() {
   const jsonLd = {
@@ -33,24 +32,22 @@ export default function Home() {
 
   return (
     <LanguageProvider>
-      <ReservationProvider>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c'),
-          }}
-        />
-        <Navbar />
-        <main>
-          <Hero />
-          <MenuSection />
-          <SpaceGallery />
-          <SocialVideos />
-          <ContactSection />
-          <ReservationCTA />
-        </main>
-        <Footer />
-      </ReservationProvider>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c'),
+        }}
+      />
+      <Navbar />
+      <main>
+        <Hero />
+        <MenuSection />
+        <SpaceGallery />
+        <SocialVideos />
+        <ContactSection />
+        <ReservationCTA />
+      </main>
+      <Footer />
     </LanguageProvider>
   );
 }

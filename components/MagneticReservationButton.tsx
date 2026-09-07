@@ -1,8 +1,7 @@
 'use client';
 
 import { ReactNode } from 'react';
-import { restaurantInfo } from '@/data/restaurant';
-import { useReservation } from '@/providers/ReservationProvider';
+import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
 export function MagneticReservationButton({
@@ -16,14 +15,9 @@ export function MagneticReservationButton({
   compact?: boolean;
   trailingIcon?: ReactNode;
 }) {
-  const { openReservation } = useReservation();
   return (
-    <a
-      href={restaurantInfo.reservationWidgetUrl}
-      onClick={(event) => {
-        event.preventDefault();
-        openReservation();
-      }}
+    <Link
+      href="/reservation"
       className={cn(
         'ui-label group inline-flex min-h-12 items-center justify-center gap-3 bg-[#dca51d] px-6 text-[#15130f] transition-colors duration-300 hover:bg-[#efbd3b] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f2bd39]',
         compact && 'min-h-11 min-w-[7.75rem] px-4',
@@ -32,6 +26,6 @@ export function MagneticReservationButton({
     >
       <span>{children}</span>
       {trailingIcon}
-    </a>
+    </Link>
   );
 }
