@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://fogo-prime-lisboa.zhan-liu128.chatgpt.site/sitemap.xml
+Host: https://fogo-prime-lisboa.zhan-liu128.chatgpt.site

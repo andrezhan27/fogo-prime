@@ -15,13 +15,15 @@ export const translations = {
     hero: {
       title: 'FOGO PRIME',
       reserve: 'Reservar mesa',
+      vibe: 'Carne no fogo. Noites bem vividas.',
       note: '',
       scroll: 'Descobrir',
       imageAlt: 'Sala do Fogo Prime em Lisboa',
     },
     menu: {
       title: 'Menu',
-      intro: 'Picanha, carnes variadas, camarão, polvo, saladas e fruta — tudo incluído no rodízio.',
+      intro:
+        'Picanha, carnes variadas, camarão, polvo, saladas e fruta — tudo incluído no rodízio.',
       priceTitle: 'Preços do rodízio',
       pdfAction: 'Ver menu completo (PDF)',
       lunch: '',
@@ -111,13 +113,15 @@ export const translations = {
     hero: {
       title: 'FOGO PRIME',
       reserve: 'Book a table',
+      vibe: 'Meat over fire. Nights well spent.',
       note: '',
       scroll: 'Discover',
       imageAlt: 'Fogo Prime dining room in Lisbon',
     },
     menu: {
       title: 'Menu',
-      intro: 'Picanha, assorted meats, shrimp, octopus, salads and fruit — all included in the rodízio.',
+      intro:
+        'Picanha, assorted meats, shrimp, octopus, salads and fruit — all included in the rodízio.',
       priceTitle: 'Rodízio prices',
       pdfAction: 'View full menu (PDF)',
       lunch: '',

@@ -9,10 +9,12 @@ export function MagneticReservationButton({
   children,
   className,
   compact = false,
+  trailingIcon,
 }: {
   children: ReactNode;
   className?: string;
   compact?: boolean;
+  trailingIcon?: ReactNode;
 }) {
   const { openReservation } = useReservation();
   return (
@@ -23,12 +25,13 @@ export function MagneticReservationButton({
         openReservation();
       }}
       className={cn(
-        'group inline-flex min-h-12 items-center justify-center gap-3 bg-[#dca51d] px-6 text-sm font-bold uppercase tracking-[0.13em] text-[#15130f] transition-colors duration-300 hover:bg-[#efbd3b] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f2bd39]',
-        compact && 'min-h-11 min-w-[7.75rem] px-4 text-[0.76rem]',
+        'ui-label group inline-flex min-h-12 items-center justify-center gap-3 bg-[#dca51d] px-6 text-[#15130f] transition-colors duration-300 hover:bg-[#efbd3b] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f2bd39]',
+        compact && 'min-h-11 min-w-[7.75rem] px-4',
         className,
       )}
     >
       <span>{children}</span>
+      {trailingIcon}
     </a>
   );
 }

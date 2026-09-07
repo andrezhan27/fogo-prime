@@ -1,7 +1,6 @@
 'use client';
 
-import { CSSProperties, ReactNode } from 'react';
-import { motion, useReducedMotion } from 'framer-motion';
+import { CSSProperties, ReactNode, useEffect, useRef, useState } from 'react';
 import { cn } from '@/lib/utils';
 
 export function Reveal({
@@ -15,18 +14,33 @@ export function Reveal({
   delay?: number;
   style?: CSSProperties;
 }) {
-  const reducedMotion = useReducedMotion();
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.12 },
+    );
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <motion.div
-      initial={reducedMotion ? false : { opacity: 0, y: 28 }}
-      whileInView={reducedMotion ? undefined : { opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.18 }}
-      transition={{ duration: 0.75, delay, ease: [0.22, 1, 0.36, 1] }}
-      className={cn(className)}
-      style={style}
+    <div
+      ref={ref}
+      className={cn('reveal', visible && 'reveal-visible', className)}
+      style={{ ...style, '--reveal-delay': `${delay}s` } as CSSProperties}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

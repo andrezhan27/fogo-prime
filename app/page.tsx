@@ -15,7 +15,8 @@ export default function Home() {
     '@context': 'https://schema.org',
     '@type': 'Restaurant',
     name: restaurantInfo.name,
-    image: 'https://fogo-prime-lisboa.zhan-liu128.chatgpt.site/images/hero-desktop.jpg',
+    image:
+      'https://fogo-prime-lisboa.zhan-liu128.chatgpt.site/images/hero-desktop.webp',
     url: 'https://fogo-prime-lisboa.zhan-liu128.chatgpt.site',
     telephone: '+351 965 366 666',
     servesCuisine: ['Brazilian', 'Rodízio'],
@@ -27,7 +28,7 @@ export default function Home() {
       addressLocality: 'Lisboa',
       addressCountry: 'PT',
     },
-    sameAs: [restaurantInfo.instagram, restaurantInfo.tiktok, restaurantInfo.facebook],
+    sameAs: [restaurantInfo.instagram, restaurantInfo.facebook],
   };
 
   return (

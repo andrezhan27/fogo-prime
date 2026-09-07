@@ -10,10 +10,8 @@ export const restaurantInfo = {
   reservationWidgetUrl: 'https://reserve.intelis.pt/fogoprime',
   fullMenuPdfUrl: '/Menu.pdf',
   instagram: 'https://www.instagram.com/fogoprime/?hl=en',
-  instagramVideo: 'https://www.instagram.com/p/Db27TGzsIMd/?hl=en',
   featuredTikTok:
     'https://www.tiktok.com/@ondeirempt/video/7672369561835965718',
-  tiktok: 'https://www.tiktok.com/@chongqingnoodles722',
   facebook: 'https://www.facebook.com/p/Prime-Fogo-61593334026375/',
   complaintsBook: 'https://www.livroreclamacoes.pt/Inicio/',
   privacy_policy_url: '' as string,
@@ -26,38 +24,17 @@ export const pricing = [
 ] as const;
 
 export const foodImages = [
-  { src: '/images/food-1.jpg', key: 'foodOne' },
-  { src: '/images/food-group-1.jpg', key: 'foodTwo' },
-  { src: '/images/food-group-2.jpg', key: 'foodThree' },
-  { src: '/images/food-4.jpg', key: 'foodFour' },
+  { src: '/images/food-1.webp', key: 'foodOne' },
+  { src: '/images/food-group-1.webp', key: 'foodTwo' },
+  { src: '/images/food-group-2.webp', key: 'foodThree' },
+  { src: '/images/food-4.webp', key: 'foodFour' },
 ] as const;
 
 export const spaceImages = [
-  { src: '/images/space-0.jpg', key: 'space0' },
-  { src: '/images/space-1.jpg', key: 'space1' },
-  { src: '/images/space-2.jpg', key: 'space2' },
-  { src: '/images/space-3.jpg', key: 'space3' },
-  { src: '/images/space-4.jpg', key: 'space4' },
-  { src: '/images/space-5.jpg', key: 'space5' },
-] as const;
-
-export const socialVideos = [
-  {
-    href: restaurantInfo.instagramVideo,
-    thumbnail: '/images/food-1.jpg',
-    platform: 'Instagram',
-    key: 'instagramVideo',
-  },
-  {
-    href: restaurantInfo.featuredTikTok,
-    thumbnail: '/images/hero-mobile.jpg',
-    platform: 'TikTok',
-    key: 'featuredTikTok',
-  },
-  {
-    href: restaurantInfo.tiktok,
-    thumbnail: '/images/food-4.jpg',
-    platform: 'TikTok',
-    key: 'tiktokProfile',
-  },
+  { src: '/images/space-0.webp', key: 'space0' },
+  { src: '/images/space-1.webp', key: 'space1' },
+  { src: '/images/space-2.webp', key: 'space2' },
+  { src: '/images/space-3.webp', key: 'space3' },
+  { src: '/images/space-4.webp', key: 'space4' },
+  { src: '/images/space-5.webp', key: 'space5' },
 ] as const;
