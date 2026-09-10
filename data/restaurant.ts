@@ -2,7 +2,7 @@ export const restaurantInfo = {
   name: 'Fogo Prime',
   address: 'Av. Miguel Bombarda, 1050-161 Lisboa, Portugal',
   phoneDisplay: '965 366 666',
-  phoneHref: 'tel:+351965366666',
+  phoneHref: 'tel:+351218006981',
   mapsUrl:
     'https://www.google.com/maps/place//data=!4m2!3m1!1s0xd193315d025ff81:0x9a31f8b03995aaf0',
   mapsEmbedUrl:
@@ -29,9 +29,12 @@ export const pricing = [
 
 export const foodImages = [
   { src: '/images/food-1.webp', key: 'foodOne' },
-  { src: '/images/food-group-1.webp', key: 'foodTwo' },
-  { src: '/images/food-group-2.webp', key: 'foodThree' },
+  { src: '/images/food-2.webp', key: 'foodTwo' },
+  { src: '/images/food-3.webp', key: 'foodThree' },
   { src: '/images/food-4.webp', key: 'foodFour' },
+  { src: '/images/food-5.webp', key: 'foodFive' },
+  { src: '/images/food-6.webp', key: 'foodSix' },
+  { src: '/images/food-7.webp', key: 'foodSeven' },
 ] as const;
 
 export const spaceImages = [

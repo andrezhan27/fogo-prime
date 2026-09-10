@@ -17,7 +17,7 @@ export default function Home() {
     image:
       'https://fogo-prime-lisboa.zhan-liu128.chatgpt.site/images/hero-desktop.webp',
     url: 'https://fogo-prime-lisboa.zhan-liu128.chatgpt.site',
-    telephone: '+351 965 366 666',
+    telephone: '+351 218 006 981',
     servesCuisine: ['Brazilian', 'Rodízio'],
     priceRange: '€€',
     address: {
