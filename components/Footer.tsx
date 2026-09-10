@@ -3,7 +3,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Camera, Users } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { restaurantInfo } from '@/data/restaurant';
+import {
+  emptyRestaurantLegalUrls,
+  getRestaurantLegalUrls,
+} from '@/lib/restaurant-legal';
 import { useLanguage } from '@/providers/LanguageProvider';
 
 const footerLinks = [
@@ -15,6 +20,17 @@ const footerLinks = [
 
 export function Footer() {
   const { copy } = useLanguage();
+  const [legalUrls, setLegalUrls] = useState(emptyRestaurantLegalUrls);
+
+  useEffect(() => {
+    const controller = new AbortController();
+
+    getRestaurantLegalUrls(controller.signal)
+      .then(setLegalUrls)
+      .catch(() => undefined);
+
+    return () => controller.abort();
+  }, []);
 
   return (
     <footer className="border-t border-white/10 bg-[#080807] px-6 pb-8 pt-16 text-[#f7f0e5] sm:px-10 sm:pt-20 lg:px-16 xl:px-20">
@@ -104,17 +120,21 @@ export function Footer() {
             , {copy.footer.rights}
           </p>
           <div className="flex flex-wrap gap-x-5 gap-y-3 lg:justify-end">
-            {restaurantInfo.privacy_policy_url ? (
+            {legalUrls.privacy_policy_url ? (
               <a
-                href={restaurantInfo.privacy_policy_url}
+                href={legalUrls.privacy_policy_url}
+                target="_blank"
+                rel="noreferrer"
                 className="underline underline-offset-4 hover:text-white"
               >
                 {copy.footer.privacy}
               </a>
             ) : null}
-            {restaurantInfo.terms_and_conditions_url ? (
+            {legalUrls.terms_and_conditions_url ? (
               <a
-                href={restaurantInfo.terms_and_conditions_url}
+                href={legalUrls.terms_and_conditions_url}
+                target="_blank"
+                rel="noreferrer"
                 className="underline underline-offset-4 hover:text-white"
               >
                 {copy.footer.terms}

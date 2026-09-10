@@ -14,8 +14,12 @@ export const restaurantInfo = {
     'https://www.tiktok.com/@ondeirempt/video/7672369561835965718',
   facebook: 'https://www.facebook.com/p/Prime-Fogo-61593334026375/',
   complaintsBook: 'https://www.livroreclamacoes.pt/Inicio/',
-  privacy_policy_url: '' as string,
-  terms_and_conditions_url: '' as string,
+} as const;
+
+export const restaurantDataSource = {
+  supabaseUrl: 'https://tccjxuzbekhycyfzjkxh.supabase.co',
+  publishableKey: 'sb_publishable_kvF-YqPsvxDSJdcM9e8ajQ_QCVU4mps',
+  restaurantId: 'fogoprime',
 } as const;
 
 export const pricing = [
