@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/next';
+import { PromotionBanner } from '@andrezhan27/intelis-restaurant-ui';
+import { restaurantInfo } from '@/lib/restaurant-info';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -40,6 +42,10 @@ export default function RootLayout({
   return (
     <html lang="pt">
       <body>
+        <PromotionBanner
+          className="site-promotion-banner"
+          restaurantId={restaurantInfo.databaseId}
+        />
         {children}
         <Analytics />
       </body>

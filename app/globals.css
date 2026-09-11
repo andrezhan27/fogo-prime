@@ -50,6 +50,11 @@
 }
 
 :root {
+  --promotion-banner-bg: #171510;
+  --promotion-banner-text: #f7f0e5;
+  --promotion-banner-link: #dca51d;
+  --promotion-banner-border: #c9bba8;
+  --site-promotion-banner-height: 2.75rem;
   --background: #f3ede2;
   --foreground: #171510;
   --card: #faf6ef;
@@ -82,6 +87,38 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+}
+
+body > .site-promotion-banner {
+  position: sticky;
+  top: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--site-promotion-banner-height);
+  min-height: var(--site-promotion-banner-height);
+  overflow: hidden;
+}
+
+body > .site-promotion-banner > button {
+  min-width: 0;
+  max-width: 100%;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--promotion-banner-link);
+  font-size: clamp(0.72rem, 2.5vw, 0.82rem);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+body > .site-promotion-banner > button > span:first-child {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+body:has(> .site-promotion-banner) > header {
+  position: sticky;
+  top: var(--site-promotion-banner-height);
 }
 
 .dark {

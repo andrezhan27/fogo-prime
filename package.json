@@ -13,6 +13,7 @@
     "format": "oxfmt"
   },
   "dependencies": {
+    "@andrezhan27/intelis-restaurant-ui": "^0.2.2",
     "@base-ui/react": "1.7.0",
     "@shadcn/react": "0.3.0",
     "@vercel/analytics": "2.0.1",
