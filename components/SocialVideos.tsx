@@ -1,13 +1,14 @@
 'use client';
 
 import Image from 'next/image';
-import { ArrowUpRight, Camera, MessageCircle, Play } from 'lucide-react';
+import { ArrowUpRight, Camera, MessageCircle, Music2, Play } from 'lucide-react';
 import { restaurantInfo } from '@/data/restaurant';
 import { Reveal } from '@/components/Reveal';
 import { useLanguage } from '@/providers/LanguageProvider';
 
 const socialLinks = [
   { key: 'instagram', href: restaurantInfo.instagram, icon: Camera },
+  { key: 'tiktok', href: restaurantInfo.tiktok, icon: Music2 },
   { key: 'facebook', href: restaurantInfo.facebook, icon: MessageCircle },
 ] as const;
 
@@ -34,7 +35,7 @@ export function SocialVideos() {
             <p className="max-w-xl text-base leading-8 text-[#c9bdad] sm:text-lg">
               {copy.social.body}
             </p>
-            <div className="mt-8 grid max-w-xl gap-3 sm:grid-cols-2">
+            <div className="mt-8 grid max-w-xl gap-3 sm:grid-cols-3">
               {socialLinks.map(({ key, href, icon: Icon }) => (
                 <a
                   key={key}

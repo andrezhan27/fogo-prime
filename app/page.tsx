@@ -27,7 +27,11 @@ export default function Home() {
       addressLocality: 'Lisboa',
       addressCountry: 'PT',
     },
-    sameAs: [restaurantInfo.instagram, restaurantInfo.facebook],
+    sameAs: [
+      restaurantInfo.instagram,
+      restaurantInfo.tiktok,
+      restaurantInfo.facebook,
+    ],
   };
 
   return (

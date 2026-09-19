@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Camera, Users } from 'lucide-react';
+import { Camera, Music2, Users } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { restaurantInfo } from '@/data/restaurant';
 import {
@@ -90,6 +90,15 @@ export function Footer() {
               >
                 <Users aria-hidden="true" className="size-4" />
                 Facebook
+              </a>
+              <a
+                href={restaurantInfo.tiktok}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex min-h-11 w-fit items-center gap-3 text-sm text-white/60 hover:text-white"
+              >
+                <Music2 aria-hidden="true" className="size-4" />
+                TikTok
               </a>
             </div>
           </div>

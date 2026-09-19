@@ -10,6 +10,7 @@ export const restaurantInfo = {
   reservationWidgetUrl: 'https://reserve.intelis.pt/fogoprime',
   fullMenuPdfUrl: '/Menu.pdf',
   instagram: 'https://www.instagram.com/fogoprime/?hl=en',
+  tiktok: 'https://www.tiktok.com/@fogo_prime',
   featuredTikTok:
     'https://www.tiktok.com/@ondeirempt/video/7672369561835965718',
   facebook: 'https://www.facebook.com/p/Prime-Fogo-61593334026375/',
