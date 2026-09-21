@@ -1,8 +1,11 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
 import { PromotionBanner } from '@andrezhan27/intelis-restaurant-ui';
 import { restaurantInfo } from '@/lib/restaurant-info';
 import './globals.css';
+
+const googleAdsId = 'AW-18425642247';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://fogo-prime-lisboa.zhan-liu128.chatgpt.site'),
@@ -49,6 +52,18 @@ export default function RootLayout({
         {children}
         <Analytics />
       </body>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${googleAdsId}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-ads-tag" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${googleAdsId}');
+        `}
+      </Script>
     </html>
   );
 }
